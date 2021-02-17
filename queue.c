@@ -24,6 +24,11 @@ int isEmptyQueue(tQueue q){
 int ExistQueue(tQueue q){
     return q != NULL;
 }
+void* peekQueue(tQueue s){
+    if(ExistQueue(s) && !isEmptyQueue(s))
+        return s->front->info;
+    return NULL;
+}
 tQueue inicializeQueue(){
     tQueue new = malloc(sizeof(struct queue));
 

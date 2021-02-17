@@ -24,6 +24,11 @@ int isEmptyStack(tStack s){
 int ExistStack(tStack s){
     return s != NULL;
 }
+void* peekStack(tStack s){
+    if(ExistStack(s) && !isEmptyStack(s))
+        return s->top->info;
+    return NULL;
+}
 tStack inicializeStack(){
     tStack new = malloc(sizeof(struct stack));
 

@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "BST.h"
@@ -21,16 +22,25 @@ int main(){
     printf("\n");
 
     printf("postOrder:\n");
-    printTree(BinarySearchTree, postOrder);
+    printTree(BinarySearchTree, non_recursivePostOrder);
+    printf("\n");
+
+    printf("postOrder nao recursivo:\n");
+    printTree(BinarySearchTree, non_recursivePostOrder);
     printf("\n");
 
     printf("InOrder:\n");
     printTree(BinarySearchTree, inOrder);
     printf("\n");
 
+    printf("InOrder nao recursivo:\n");
+    printTree(BinarySearchTree, non_recursiveInOrder);
+    printf("\n");
+
     printf("BFS:\n");
     printTree(BinarySearchTree, BFS);
     printf("\n");
 
+    printf("Height: %d\n", height(BinarySearchTree));
     freeBST(BinarySearchTree);
 }

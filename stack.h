@@ -4,6 +4,7 @@
 typedef struct stack *tStack;
 
 tStack inicializeStack();
+void* peekStack(tStack);
 
 void push(void*, tStack);
 void* pop(tStack);
